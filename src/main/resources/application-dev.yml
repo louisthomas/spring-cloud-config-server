@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/projects/personal/spring-cloud-config-repo
+management:
+  security:
+    enabled: false
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
